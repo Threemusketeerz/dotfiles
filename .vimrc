@@ -22,6 +22,7 @@ call vundle#begin()
     Plugin 'myusuf3/numbers.vim'
     "Plugin 'Yggdroot/indentLine'
     Plugin 'townk/vim-autoclose'
+    Plugin 'artur-shaik/vim-javacomplete2'
 
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
@@ -73,6 +74,9 @@ nnoremap <leader>gt :YcmCompleter GoTo<CR>
 
 set hlsearch
 
+" Remap fd to <ESC>
+inoremap fd <ESC>
+
 " Remap for Ctrl-w j to Ctrl-j/k to ease split view navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -84,7 +88,7 @@ nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
 
 let g:indentLine_char = '.'
-colorscheme badwolf
+" colorscheme badwolf
 
 " For indentation levels 4 and soft tabs.
 set encoding=utf-8
