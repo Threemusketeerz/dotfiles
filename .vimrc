@@ -23,6 +23,9 @@ call vundle#begin()
     "Plugin 'Yggdroot/indentLine'
     Plugin 'townk/vim-autoclose'
     Plugin 'artur-shaik/vim-javacomplete2'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'Shougo/vimfiler.vim'
+    Plugin 'solarized/vim-colors-solarized'
 
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
@@ -31,6 +34,11 @@ call vundle#begin()
     
 call vundle#end()		" required
 filetype plugin indent on	" required
+
+" Solarized theme
+syntax enable
+set background=dark
+colorscheme solarized
 
 " for moving lines.
 no <down> ddp
