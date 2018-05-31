@@ -27,6 +27,8 @@ call vundle#begin()
     Plugin 'Shougo/vimfiler.vim'
     Plugin 'solarized/vim-colors-solarized'
 
+    Plugin 'hsitz/VimOrganizer'
+
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
 
@@ -34,6 +36,9 @@ call vundle#begin()
     
 call vundle#end()		" required
 filetype plugin indent on	" required
+
+let g:JavaComplete_Home="~/.vim/bundle/vim-javacomplete2"
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " Solarized theme
 syntax enable
