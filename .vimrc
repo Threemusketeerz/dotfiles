@@ -39,7 +39,9 @@ call vundle#begin()
 call vundle#end()		" required
 filetype plugin indent on	" required
 
-let g:JavaComplete_Home="~/.vim/bundle/vim-javacomplete2"
+let g:JavaComplete_Home="$HOME/.vim/bundle/vim-javacomplete2"
+let g:JavaComplete_LibsPath="$HOME/.vim/bundle/vim-javacomplete2/libs/javavi/target"
+"let g:JavaComplete_UsePython3=1
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " Solarized theme
