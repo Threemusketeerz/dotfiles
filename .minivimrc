@@ -1,0 +1,32 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" fPlugin 'suda/vim-arduino-syntax'
+Plugin '4Evergreen4/vim-hardy.git'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+
+call vundle#end()
+filetype plugin indent on
+
+imap fd <ESC>
+nmap j jzz
+nmap k kzz
+
+colorscheme blue
+
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+au BufRead,BufNewFile *.pde set filetype=arduino
+au BufRead,BufNewFile *.ino set filetype=arduino
+
+
