@@ -3,10 +3,10 @@
 # for examples
 
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+#case $- in
+#    *i*) ;;
+#      *) return;;
+#esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -119,3 +119,4 @@ fi
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
 export SWT_GTK3=0
+export MYVIMRC='~/.vimrc'
