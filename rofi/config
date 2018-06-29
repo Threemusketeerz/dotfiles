@@ -1,0 +1,13 @@
+//rofi.theme: /usr/share/rofi/themes/Pop-Dark.rasi
+#define TRANS 50
+#define INVISIBLE 00000000 
+
+!State 			'bg',		'fg',		'bgalt',  	'hlbg',		'hlfg'
+//rofi.color-normal: 	#001f343f,      #FFf3f4f5,    	#002f343f,	#002f343f,	#FF9575cd
+rofi.color-normal: 	#001f343f,      #FFf3f4f5,    	#002f343f,	#002f343f,	#FF9575cd
+
+!			'background', 'border', 'seperator'
+rofi.color-window: 	#702f343f,     #002f343f,  #002f343f
+
+
+
