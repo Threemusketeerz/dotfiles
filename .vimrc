@@ -22,7 +22,6 @@ call vundle#begin()
     Plugin 'myusuf3/numbers.vim'
     "Plugin 'Yggdroot/indentLine'
     Plugin 'townk/vim-autoclose'
-    Plugin 'artur-shaik/vim-javacomplete2'
     Plugin 'majutsushi/tagbar'
     Plugin 'Shougo/unite.vim'
     Plugin 'Shougo/vimfiler.vim'
@@ -39,26 +38,11 @@ call vundle#begin()
 call vundle#end()		" required
 filetype plugin indent on	" required
 
-let g:JavaComplete_Home="$HOME/.vim/bundle/vim-javacomplete2"
-let g:JavaComplete_LibsPath="$HOME/.vim/bundle/vim-javacomplete2/libs/javavi/target"
-"let g:JavaComplete_UsePython3=1
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
 " Solarized theme
 syntax enable
 set background=dark
 colorscheme solarized
 
-" Javacomplete2 automation.
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
-imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
-
-nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
-imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
-
-
-    
 " GUI settings
 if has("gui_running")
     " Simplify the ui
