@@ -49,9 +49,10 @@ bindsym $mod+d exec rofi -show run -config "~/.config/rofi/config" -fake-transpa
 bindsym $mod+m move workspace to output right
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -100,30 +101,37 @@ bindsym $mod+a focus parent
 
 set $workspace1 "1: Terminals"
 set $workspace2 "2: Editor"
+set $workspace3 "3: Intellij"
+set $workspace4 "4: NoteTaking"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
 set $workspace10 "10: Firefox"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 
@@ -171,11 +179,14 @@ for_window [class="^.*"] border pixel 0
 
 # Startup options 
 exec_always compton
-exec_always feh --bg-scale ~/Pictures/nightsky.jpg
+exec_always feh --bg-scale ~/Pictures/Wallpapers/nightsky.jpg
 
 gaps inner 10
 
 # Assign apps to worskpaces
 assign [class="Firefox"] $workspace10
-assign [class="Emacs"] $workspace2
+assign [class="Emacs"] $workspace4
 assign [class="Arduino"] $workspace2
+assign [class="Eclipse"] $workspace2
+assign [class="Codeblocks"] $workspace2
+assign [class="jetbrains-idea-ce"] $workspace3
