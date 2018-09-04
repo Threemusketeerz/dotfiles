@@ -11,8 +11,8 @@ sudo apt install git nvim
 
 # i3 specific installation
 if [ $1 = "i3" ]; then
-    echo "i3 option"
-    sudo apt install feh compton i3status i3blocks thunder
+    echo "i3 option chosen"
+    sudo apt install feh compton i3status i3blocks thunar
 fi
 
 # Clone vundle into .vim
