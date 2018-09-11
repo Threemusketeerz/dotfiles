@@ -52,7 +52,6 @@ bindsym $mod+m move workspace to output right
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $mod+h focus left
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -99,16 +98,16 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1: Terminals"
-set $workspace2 "2: Editor"
-set $workspace3 "3: Intellij"
-set $workspace4 "4: NoteTaking"
+set $workspace1 "  Terminals"
+set $workspace2 " Editor"
+set $workspace3 " Intellij"
+set $workspace4 " NoteTaking"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "10: Firefox"
+set $workspace10 "  Firefox"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -170,8 +169,23 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+set $colorDarkBlue #525564
+set $colorDarkBlueLighter #74828F
+set $colorLightBlue #96C0CE
+set $colorGrey #BEB9B5
+set $colorRed #C25B56
+
 bar {
-        status_command i3status
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+
+    colors {
+        statusline $colorDarkBlue
+        background $colorDarkBlue
+       
+        inactive_workspace $colorDarkBlue $colorDarkBlue $colorDarkBlueLighter 
+        focused_workspace  $colorDarkBlue $colorDarkBlue #ffffff 
+        urgent_workspace   $colorRed      $colorRed      #ffffff
+    }    
 }
 
 # i3 gaps setup.
@@ -194,3 +208,5 @@ assign [class="jetbrains-idea-ce"] $workspace3
 # HELP
 # xprops for recieving window classes.
 # thunar for file exploring
+
+font 'Font Awesome 5 Brands-Regular-400.otf'
