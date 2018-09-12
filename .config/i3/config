@@ -99,9 +99,9 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace1 "  Terminals"
-set $workspace2 " Editor"
-set $workspace3 " Intellij"
-set $workspace4 " NoteTaking"
+set $workspace2 "  Editor"
+set $workspace3 "  Intellij"
+set $workspace4 "  Notes"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
@@ -167,26 +167,67 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-set $colorDarkBlue #525564
-set $colorDarkBlueLighter #74828F
-set $colorLightBlue #96C0CE
-set $colorGrey #BEB9B5
-set $colorRed #C25B56
+
+############## THEME #################
+# old color set, keeping it for now
+# set $colorDarkBlue #525564
+# set $colorDarkBlueLighter #74828F
+# set $colorLightBlue #96C0CE
+# set $colorGrey #BEB9B5
+
+## Palette ##
+# Shades of light blue.
+# Blue scale shaders
+#set $shade0 #60B5F6
+#set $shade1 #3E76A1
+#set $shade2 #29506D
+#set $shade3 #152A39
+#set $shade4 #020405
+#set $colorRed #C25B56
+#set $white #ffffff
+
+## Palette 2 ##
+#Grey/blue scale
+#http://paletton.com/#uid=13x0u0kllll6Vik6VnOcd787daW
+#shade 0 = #29506D = rgb( 41, 80,109) = rgba( 41, 80,109,1) = rgb0(0.161,0.314,0.427)
+#shade 1 = #4B565E = rgb( 75, 86, 94) = rgba( 75, 86, 94,1) = rgb0(0.294,0.337,0.369)
+#shade 2 = #616F7A = rgb( 97,111,122) = rgba( 97,111,122,1) = rgb0(0.38,0.435,0.478)
+#shade 3 = #181F25 = rgb( 24, 31, 37) = rgba( 24, 31, 37,1) = rgb0(0.094,0.122,0.145)
+#shade 4 = #2C3338 = rgb( 44, 51, 56) = rgba( 44, 51, 56,1) = rgb0(0.173,0.2,0.22)
+
+set $fg             #181f25
+set $bg             #4B565E
+set $inactive_text  #181f25
+set $active_text    #ffffff
+set $urgent         #c25b56
+
+
+# class                     #border #backgr         #text           #indicator  #child_border
+client.focused              $bg     $bg             $active_text    $bg         $bg
+client.unfocused            $bg     $bg             $inactive_text  $bg         $bg
+#client.urgent
+
+# class                     #bg
+client.background           $bg
 
 bar {
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
     colors {
-        statusline $colorDarkBlue
-        background $colorDarkBlue
+    
+        statusline $bg
+        background $bg
        
-        inactive_workspace $colorDarkBlue $colorDarkBlue $colorDarkBlueLighter 
-        focused_workspace  $colorDarkBlue $colorDarkBlue #ffffff 
-        urgent_workspace   $colorRed      $colorRed      #ffffff
+        inactive_workspace $bg      $bg     $inactive_text
+        focused_workspace  $bg      $bg     $active_text
+        urgent_workspace   $bg      $bg     $urgent
     }    
 }
+
+############## THEME #################
 
 # i3 gaps setup.
 for_window [class="^.*"] border pixel 0
@@ -195,7 +236,7 @@ for_window [class="^.*"] border pixel 0
 exec_always compton
 exec_always feh --bg-scale ~/Pictures/Wallpapers/nightsky.jpg
 
-gaps inner 10
+gaps inner 30
 
 assign [class="Emacs"] $workspace4
 # Assign apps to worskpaces
