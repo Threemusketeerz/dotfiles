@@ -1,4 +1,3 @@
-
 " Solarized theme
 syntax enable
 set background=dark
@@ -12,3 +11,4 @@ if has("gui_running")
     " Set a prettier font.
     set guifont=SOURCE\ CODE\ PRO\ FOR\ POWERLINE
 endif
+

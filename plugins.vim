@@ -10,30 +10,31 @@ call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
 
     " OPTIONAL PLUGINS
+    " Motion plugins
     Plugin 'easymotion/vim-easymotion'
+
+    " Theme plugins
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
+
+    " Utility
     Plugin 'tpope/vim-fugitive'
     Plugin 'tpope/vim-surround'
     Plugin 'scrooloose/nerdcommenter'
-    Plugin 'scrooloose/nerdtree' 
+    Plugin 'hsitz/VimOrganizer'
+    Plugin 'honza/vim-snippets'
+    Plugin 'Valloric/YouCompleteMe'
+    Plugin 'raimondi/delimitmate'
+
+    " Navigation
     Plugin 'kien/ctrlp.vim'
-    "Plugin 'python-mode/python-mode'
+    Plugin 'scrooloose/nerdtree' 
     Plugin 'myusuf3/numbers.vim'
-    "Plugin 'Yggdroot/indentLine'
     Plugin 'townk/vim-autoclose'
-    Plugin 'majutsushi/tagbar'
-    Plugin 'Shougo/unite.vim'
-    Plugin 'Shougo/vimfiler.vim'
     Plugin 'altercation/vim-colors-solarized'
 
-    Plugin 'hsitz/VimOrganizer'
-
-    Plugin 'SirVer/ultisnips'
-    Plugin 'honza/vim-snippets'
+    " Python
     Plugin 'davidhalter/jedi-vim'
-
-"    Plugin 'Valloric/YouCompleteMe'
     
 call vundle#end()		" required
 filetype plugin indent on	" required

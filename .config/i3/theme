@@ -1,0 +1,35 @@
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+
+# Shades of light blue.
+set $shade0 #29506D
+set $shade1 #437093
+set $shade2 #356080
+set $shade3 #1f415b
+set $shade4 #153248
+
+set $foreground $shade2
+set $background $shade2
+set $inactive_text $hade0
+
+# old color set
+# set $colorDarkBlue #525564
+# set $colorDarkBlueLighter #74828F
+# set $colorLightBlue #96C0CE
+# set $colorGrey #BEB9B5
+# set $colorRed #C25B56
+
+bar {
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+
+    colors {
+    
+        statusline $colorDarkBlue
+        background $colorDarkBlue
+       
+        inactive_workspace $background      $foreground     $shade0
+        focused_workspace  $colorDarkBlue   $colorDarkBlue #ffffff 
+        urgent_workspace   $colorRed        $colorRed      #ffffff
+    }    
+}
+
