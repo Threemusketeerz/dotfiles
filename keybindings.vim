@@ -12,8 +12,8 @@ noremap <F2> :w !diff % - <enter>
 nnoremap j jzz
 nnoremap k kzz
 
-" Remap fd to <ESC>
-inoremap fd <ESC>
+" Exit insert
+inoremap jk <ESC>
 
 " Remap for Ctrl-w j to Ctrl-j/k to ease split view navigation
 nnoremap <C-J> <C-W><C-J>
@@ -27,6 +27,6 @@ nnoremap <F4> :NumbersOnOff<CR>
 
 nnoremap <leader>sv :source $MYVIMRC <CR>
 nnoremap <leader>ve :e ~/dotfiles/.vimrc <CR>
-nnoremap <leader>ke :e ~/dotfiles/keybindings.vimrc <CR>
-nnoremap <leader>ge :e ~/dotfiles/general.vimrc <CR>
-nnoremap <leader>pe :e ~/dotfiles/plugins.vimrc <CR>
+nnoremap <leader>ke :e ~/dotfiles/keybindings.vim <CR>
+nnoremap <leader>ge :e ~/dotfiles/general.vim <CR>
+nnoremap <leader>pe :e ~/dotfiles/plugins.vim <CR>

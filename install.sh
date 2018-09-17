@@ -30,9 +30,9 @@ done
 # Symlink everything up
 echo "---"
 echo "Setting up symlinks"
-ln -s $DOTFILES/general.vimrc ~
-ln -s $DOTFILES/keybindings.vimrc ~
-ln -s $DOTFILES/plugins.vimrc ~
+ln -s $DOTFILES/general.vim ~
+ln -s $DOTFILES/keybindings.vim ~
+ln -s $DOTFILES/plugins.vim ~
 ln -s $DOTFILES/.vimrc ~
 ln -s $DOTFILES/.tmux.conf ~
 ln -s $DOTFILES/.bashrc ~
