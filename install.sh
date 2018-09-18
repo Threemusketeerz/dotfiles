@@ -23,7 +23,7 @@ for arg in $@; do
     fi
     if [ $arg = "i3" ]; then
         echo "i3 option chosen"
-        sudo apt install feh compton i3status i3blocks thunar
+        sudo apt install feh compton i3status i3blocks thunar rofi
     fi
 done
 
