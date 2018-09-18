@@ -27,17 +27,18 @@ for arg in $@; do
     fi
 done
 
+
 # Symlink everything up
 echo "---"
 echo "Setting up symlinks"
-ln -s $DOTFILES/general.vim ~
-ln -s $DOTFILES/keybindings.vim ~
-ln -s $DOTFILES/plugins.vim ~
-ln -s $DOTFILES/.vimrc ~
+ln -s $DOTFILES/.config/nvim $HOME/.config
+#ln -s $DOTFILES/.config/keybindings.vim ~
+#ln -s $DOTFILES/.config/plugins.vim ~
+#ln -s $DOTFILES/.config/init.vim~
 ln -s $DOTFILES/.tmux.conf ~
 ln -s $DOTFILES/.bashrc ~
-ln -s $DOTFILES/.config/i3 .config/i3 ~
-ln -s $DOTFILES/.config/rofi .config/rofi ~
+ln -s $DOTFILES/.config/i3 $HOME/.config
+ln -s $DOTFILES/.config/rofi $HOME/.config
 
 echo "---"
 echo "Now to finish off, setup your terminal to support Solarized theme"
