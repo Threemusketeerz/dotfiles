@@ -1,7 +1,7 @@
 " Include custom files
-source ~/plugins.vim
-source ~/general.vim
-source ~/keybindings.vim
+source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/general.vim
+source $HOME/.config/nvim/keybindings.vim
 
 " Bindings
 " nnoremap <leader>gt :YcmCompleter GoTo<CR>

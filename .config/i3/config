@@ -234,7 +234,7 @@ for_window [class="^.*"] border pixel 0
 
 # Startup options 
 exec_always compton
-exec_always feh --bg-scale ~/Pictures/Wallpapers/nightsky.jpg
+exec_always feh --bg-scale ~/dotfiles/Awesometree.jpg
 
 gaps inner 30
 
