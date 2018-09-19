@@ -126,3 +126,5 @@ export SWT_GTK3=0
 export MYVIMRC='~/.vimrc'
 
 export PATH="$PATH:/opt/mssql-tools/bin"
+
+export BRIGHTNESS=10

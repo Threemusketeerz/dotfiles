@@ -1,15 +1,25 @@
-def_brightness=1
-max_bightness=1.5
-min_brightness=0.3
+max_bightness=12
+tick_amount=1
+min_brightness=3
 
-if ! [ -x $PWD/brightness.txt ]; then
-    echo cur_brightness=$def_brightness
-fi
+brightness=$(cat ~/dotfiles/scripts/brightness.txt)
+echo $brightness
 
-brightness= # Get brightness from file
+for arg in $@; do
+    if [[ $arg =~ "inc" ]]; then
+        if [ $brightness -lt $max_bightness ]; then
+            brightness=$(($brightness+$tick_amount))
+        fi
+        echo "Brightness = $brightness"
+    elif [[ $arg =~ "dec" ]]; then
+        if [ $brightness -gt $min_brightness ]; then
+            brightness=$(($brightness-$tick_amount))
+        fi
+        echo "Brightness = $brightness"
+    fi
 
+    echo $brightness > ~/dotfiles/scripts/brightness.txt
 
-get_brightness()
-{
-    
-}
+done
+
+xrandr --output eDP-1 --brightness $(bc <<< "scale=2; $brightness/10")
