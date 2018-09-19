@@ -1,5 +1,5 @@
 //rofi.theme: /usr/share/rofi/themes/Pop-Dark.rasi
-#define TRANS 50
+#define TRANS 80
 #define INVISIBLE 00000000 
 
 !State 			'bg',		'fg',		'bgalt',  	'hlbg',		'hlfg'

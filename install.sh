@@ -39,6 +39,8 @@ ln -s $DOTFILES/.tmux.conf ~
 ln -s $DOTFILES/.bashrc ~
 ln -s $DOTFILES/.config/i3 $HOME/.config
 ln -s $DOTFILES/.config/rofi $HOME/.config
+ln -s $DOTFILES/scripts/buildmvn.sh /usr/local/bin
+ln -s $DOTFILES/scripts/lock.sh /usr/local/bin
 
 echo "---"
 echo "Now to finish off, setup your terminal to support Solarized theme"

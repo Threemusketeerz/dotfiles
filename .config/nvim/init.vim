@@ -19,8 +19,8 @@ set softtabstop=4
 :au BufNewFile,BufRead *.html set syntax=html
 
 " Annoyances
-command! Tree NERDTree
-command! Treet NERDTreeToggle
+command! T NERDTree
+command! Tt NERDTreeToggle
 
 command! W w
 command! Q q

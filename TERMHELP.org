@@ -1,0 +1,6 @@
+* Great tools for the terminal
+** nmcli
+    Network Manager client.
+** thunar
+    File explorer
+** 

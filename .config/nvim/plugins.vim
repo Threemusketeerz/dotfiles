@@ -33,8 +33,18 @@ call vundle#begin()
     Plugin 'townk/vim-autoclose'
     Plugin 'altercation/vim-colors-solarized'
 
+    " Note taking
+    Plugin 'xolox/vim-notes'
+    Plugin 'xolox/vim-misc'
+
+    " Latex 
+    Plugin 'vim-latex/vim-latex'
+
     " Python
     Plugin 'davidhalter/jedi-vim'
+
+    " C/C++
+    Plugin 'WolfgangMehner/c-support'
     
 call vundle#end()		" required
 filetype plugin indent on	" required

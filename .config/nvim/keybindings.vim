@@ -25,8 +25,8 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
 
-nnoremap <leader>sv :source $MYVIMRC <CR>
-nnoremap <leader>ve :e ~/dotfiles/.vimrc <CR>
-nnoremap <leader>ke :e ~/dotfiles/keybindings.vim <CR>
-nnoremap <leader>ge :e ~/dotfiles/general.vim <CR>
-nnoremap <leader>pe :e ~/dotfiles/plugins.vim <CR>
+nnoremap <leader>sv :source ~/dotfiles/.config/nvim/init.vim <CR>
+nnoremap <leader>ve :e ~/dotfiles/.config/nvim/init.vim <CR>
+nnoremap <leader>ke :e ~/dotfiles/.config/nvim/keybindings.vim <CR>
+nnoremap <leader>ge :e ~/dotfiles/.config/nvim/general.vim <CR>
+nnoremap <leader>pe :e ~/dotfiles/.config/nvim/plugins.vim <CR>

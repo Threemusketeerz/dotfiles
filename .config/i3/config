@@ -40,6 +40,9 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec rofi -show run -config "~/.config/rofi/config" -fake-transparency
 
+# Awesome lock screen
+bindsym $mod+Shift+x exec bash /home/minihive/Downloads/i3lock-color/lock.sh 
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -165,7 +168,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym qmod+r mode "resize"
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -236,6 +239,11 @@ for_window [class="^.*"] border pixel 0
 exec_always compton
 exec_always feh --bg-scale ~/dotfiles/Awesometree.jpg
 
+# exec --no-startup-id betterlockscreen source ~/.fehbg 
+
+## Interesting lockscreen
+# bindcode 38 exec betterlockscreen -u "~/dotfiles/Awesometree.jpg" --l"blue"
+
 gaps inner 30
 
 assign [class="Emacs"] $workspace4
@@ -250,7 +258,8 @@ assign [class="jetbrains-idea-ce"] $workspace3
 # xprops for recieving window classes.
 # thunar for file exploring
 
-font 'Font Awesome 5 Brands-Regular-400.otf'
+font 'Font Awesome 5 Brands-Regular-400.otf' 15
+
 
 ####### Misc button setup! #######
 # Fetched from https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
