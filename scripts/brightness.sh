@@ -1,4 +1,4 @@
-max_bightness=12
+max_bightness=10
 tick_amount=1
 min_brightness=3
 
