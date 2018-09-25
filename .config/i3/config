@@ -46,7 +46,7 @@ bindsym $mod+Shift+x exec bash /home/minihive/Downloads/i3lock-color/lock.sh
 bindsym $mod+Shift+u exec bash /home/minihive/dotfiles/scripts/brightness.sh inc
 bindsym $mod+Shift+d exec bash /home/minihive/dotfiles/scripts/brightness.sh dec
 
-exec setxkbmap -layout "dk,us" -option "grp:alt_shift_toggle"
+exec setxkbmap -layout "us,dk" -option "grp:alt_shift_toggle"
 
 
 
@@ -108,16 +108,20 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "  Terminals"
-set $workspace2 "  Editor"
-set $workspace3 "  Intellij"
-set $workspace4 "  Notes"
+#set $workspace1 "  Terminals"
+#set $workspace2 "  Editor"
+#set $workspace3 "  Intellij"
+#set $workspace4 "  Notes"
+set $workspace1 "Terminals"
+set $workspace2 "Eclipse"
+set $workspace3 "Intellij"
+set $workspace4 "Notes"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "  Firefox"
+set $workspace10 "Firefox"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -223,19 +227,19 @@ client.unfocused            $bg     $bg             $inactive_text  $bg         
 # class                     #bg
 client.background           $bg
 
-bar {
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#bar {
+    #status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
-    colors {
+    #colors {
     
-        statusline $bg
-        background $bg
+        #statusline $bg
+        #background $bg
        
-        inactive_workspace $bg      $bg     $inactive_text
-        focused_workspace  $bg      $bg     $active_text
-        urgent_workspace   $bg      $bg     $urgent
-    }    
-}
+        #inactive_workspace $bg      $bg     $inactive_text
+        #focused_workspace  $bg      $bg     $active_text
+        #urgent_workspace   $bg      $bg     $urgent
+    #}    
+#}
 
 ############## THEME #################
 
@@ -245,6 +249,8 @@ for_window [class="^.*"] border pixel 0
 # Startup options 
 exec_always compton
 exec_always feh --bg-scale ~/dotfiles/Awesometree.jpg
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # exec --no-startup-id betterlockscreen source ~/.fehbg 
 

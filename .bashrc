@@ -128,3 +128,9 @@ export MYVIMRC='~/.vimrc'
 export PATH="$PATH:/opt/mssql-tools/bin"
 
 export BRIGHTNESS=10
+
+export VIMINIT='source $MYVIMRC'
+export MYVIMRC='~/.config/nvim/init.vim'
+
+export PATH+=:~/.local/bin
+
