@@ -125,7 +125,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 export SWT_GTK3=0
 export MYVIMRC='~/.vimrc'
 
-export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH="$PATH:/opt/mssql-tools/bin:~/dotfiles/scripts"
 
 export BRIGHTNESS=10
 

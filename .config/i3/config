@@ -43,8 +43,18 @@ bindsym $mod+d exec rofi -show run -config "~/.config/rofi/config" -fake-transpa
 # Awesome lock screen
 bindsym $mod+Shift+x exec bash /home/minihive/Downloads/i3lock-color/lock.sh 
 
-bindsym $mod+Shift+u exec bash /home/minihive/dotfiles/scripts/brightness.sh inc
-bindsym $mod+Shift+d exec bash /home/minihive/dotfiles/scripts/brightness.sh dec
+
+# To get this to work on the lenovo laptop.
+# Chect /etc/X11/ for xorg.conf
+# Add 
+#Section "Device"
+    #Identifier "0x42" // found by xrandr --verbose
+    #Driver "intel"
+    #Option "Backlight" "intel_backlight" // /sys/class/backlight etc.
+#EndSection
+# Reference https://askubuntu.com/questions/790972/xbacklight-no-outputs-have-backlight-property
+#bindsym $mod+Shift+u exec xbacklight -inc 5
+#bindsym $mod+Shift+d exec xbacklight -dec 5
 
 exec setxkbmap -layout "us,dk" -option "grp:alt_shift_toggle"
 
@@ -248,7 +258,7 @@ for_window [class="^.*"] border pixel 0
 
 # Startup options 
 exec_always compton
-exec_always feh --bg-scale ~/dotfiles/Awesometree.jpg
+exec_always feh --bg-scale ~/Pictures/Wallpapers/simpleNightSky.png
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -282,8 +292,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad

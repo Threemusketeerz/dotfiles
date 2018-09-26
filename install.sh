@@ -9,7 +9,8 @@ for arg in $@; do
         sudo apt upgrade
 
         # General
-        sudo apt install git nvim 
+        sudo apt install git nvim snap
+        sudo snap install spotify eclipse default-jdk intellij-idea-community docker
 
         # i3 specific installation
 
@@ -23,7 +24,9 @@ for arg in $@; do
     fi
     if [ $arg = "i3" ]; then
         echo "i3 option chosen"
-        sudo apt install feh compton i3status i3blocks thunar rofi
+        sudo apt install feh compton i3status i3blocks thunar rofi xbacklight
+        echo i3-gaps not installed, do this yourself
+        echo polybar not installed, do this yourself
     fi
 done
 
