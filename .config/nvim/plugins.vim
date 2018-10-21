@@ -43,8 +43,12 @@ call vundle#begin()
     " Python
     Plugin 'davidhalter/jedi-vim'
 
-    " C/C++
+ :   " C/C++
     Plugin 'WolfgangMehner/c-support'
+
+    " Plantuml
+    Plugin 'scrooloose/vim-slumlord'
+    Plugin 'aklt/plantuml-syntax'
     
 call vundle#end()		" required
 filetype plugin indent on	" required

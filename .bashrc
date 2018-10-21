@@ -121,11 +121,15 @@ if ! shopt -oq posix; then
 fi
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias sapt='sudo apt'
+alias sapti='sudo apt install'
+
+alias ovpnc='sudo openvpn --daemon --askpass --config $HOME/ovpns/raspvpn.ovpn'
 
 export SWT_GTK3=0
 export MYVIMRC='~/.vimrc'
 
-export PATH="$PATH:/opt/mssql-tools/bin:~/dotfiles/scripts"
+export PATH="$PATH:/opt/mssql-tools/bin:~/dotfiles/scripts:~/.jarfiles"
 
 export BRIGHTNESS=10
 
@@ -134,3 +138,4 @@ export MYVIMRC='~/.config/nvim/init.vim'
 
 export PATH+=:~/.local/bin
 
+export EDITOR=vim

@@ -34,10 +34,6 @@ command! Q q
     "\ autoindent
     "\ fileformat=unix
 
-" Removes double indent in closures.
-let g:pyindent_open_paren = '&sw'
-let g:pyindent_nested_paren = '&sw'
-let g:pyindent_continue = '&sw'
 
 " Airline powerline fonts
 let g:airline_powerline_fonts = 1
