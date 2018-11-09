@@ -1,55 +1,30 @@
-set nocompatible		" be iMproved, required
-filetype off 			" require
+set packpath^=~/.vim
 
-" set the runtime path to include vundle and initialize
-set rtp +=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" Alternatively, pass a path where vundle should install plugins
+packadd minpac
 
-    " let Vundle manage Vundle, required*
-    Plugin 'VundleVim/Vundle.vim'
+call minpac#init()
 
-    " OPTIONAL PLUGINS
-    " Motion plugins
-    Plugin 'easymotion/vim-easymotion'
+call minpac#add('easymotion/vim-easymotion')
 
-    " Theme plugins
-    Plugin 'vim-airline/vim-airline'
-    Plugin 'vim-airline/vim-airline-themes'
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-surround')
+call minpac#add('scrooloose/nerdcommenter')
+""call minpac#add('raimondi/delimitmate')
+call minpac#add('kien/ctrlp.vim')
 
-    " Utility
-    Plugin 'tpope/vim-fugitive'
-    Plugin 'tpope/vim-surround'
-    Plugin 'scrooloose/nerdcommenter'
-    Plugin 'hsitz/VimOrganizer'
-    Plugin 'honza/vim-snippets'
-    Plugin 'Valloric/YouCompleteMe'
-    Plugin 'raimondi/delimitmate'
+call minpac#add('vim-latex/vim-latex')
+call minpac#add('scrooloose/vim-slumlord')
+call minpac#add('aklt/plantuml-syntax')
 
-    " Navigation
-    Plugin 'kien/ctrlp.vim'
-    Plugin 'scrooloose/nerdtree' 
-    Plugin 'myusuf3/numbers.vim'
-    Plugin 'townk/vim-autoclose'
-    Plugin 'altercation/vim-colors-solarized'
+" call minpac#add('davidhalter/jedi-vim')
 
-    " Note taking
-    Plugin 'xolox/vim-notes'
-    Plugin 'xolox/vim-misc'
+call minpac#add('altercation/vim-colors-solarized')
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-airline/vim-airline-themes')
 
-    " Latex 
-    Plugin 'vim-latex/vim-latex'
+call minpac#add('vim-syntastic/syntastic')
 
-    " Python
-    Plugin 'davidhalter/jedi-vim'
+call minpac#add('k-takata/minpac')
 
- :   " C/C++
-    Plugin 'WolfgangMehner/c-support'
-
-    " Plantuml
-    Plugin 'scrooloose/vim-slumlord'
-    Plugin 'aklt/plantuml-syntax'
-    
-call vundle#end()		" required
-filetype plugin indent on	" required
-
+command! PluginUpdate call minpac#update()
+command! PluginClean call minpac#clean() 

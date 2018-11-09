@@ -30,4 +30,6 @@ nnoremap <leader>ve :e ~/dotfiles/.config/nvim/init.vim <CR>
 nnoremap <leader>ke :e ~/dotfiles/.config/nvim/keybindings.vim <CR>
 nnoremap <leader>ge :e ~/dotfiles/.config/nvim/general.vim <CR>
 nnoremap <leader>pe :e ~/dotfiles/.config/nvim/plugins.vim <CR> 
+nnoremap <leader>ae :e ~/dotfiles/.config/nvim/abbr.vim <CR>
+
 com! FormatJson %!python -m json.tool

@@ -10,7 +10,7 @@ for arg in $@; do
 
         # General
         sudo apt install git nvim snap
-        sudo snap install spotify eclipse default-jdk intellij-idea-community docker
+        sudo snap install spotify eclipse default-jdk intellij-idea-community docker --classic
 
         # i3 specific installation
 
@@ -24,7 +24,7 @@ for arg in $@; do
     fi
     if [ $arg = "i3" ]; then
         echo "i3 option chosen"
-        sudo apt install feh compton i3status i3blocks thunar rofi xbacklight
+        sudo apt install feh compton i3status i3blocks rofi xbacklight
         echo i3-gaps not installed, do this yourself
         echo polybar not installed, do this yourself
     fi
@@ -40,6 +40,7 @@ ln -s $DOTFILES/.config/nvim $HOME/.config
 #ln -s $DOTFILES/.config/init.vim~
 ln -s $DOTFILES/.tmux.conf ~
 ln -s $DOTFILES/.bashrc ~
+ls -s $DOTFILES/.spacemacs ~
 ln -s $DOTFILES/.config/i3 $HOME/.config
 ln -s $DOTFILES/.config/rofi $HOME/.config
 ln -s $DOTFILES/scripts/buildmvn.sh /usr/local/bin

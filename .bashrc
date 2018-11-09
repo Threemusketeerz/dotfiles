@@ -120,11 +120,23 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# List the contents of the folder after choosing the dir
+chooseAndList()
+{
+    cd $@
+    ls -la
+}
+
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 alias sapt='sudo apt'
 alias sapti='sudo apt install'
 
 alias ovpnc='sudo openvpn --daemon --askpass --config $HOME/ovpns/raspvpn.ovpn'
+
+alias umlet='java -jar ~/.jarfiles/Umlet/umlet.jar'
+
+# alias cd='cd $@ & ls -la'
+alias c='chooseAndList'
 
 export SWT_GTK3=0
 export MYVIMRC='~/.vimrc'
@@ -139,3 +151,8 @@ export MYVIMRC='~/.config/nvim/init.vim'
 export PATH+=:~/.local/bin
 
 export EDITOR=vim
+
+# export SHELL=/usr/bin/fish
+
+# export https_proxy='127.0.0.1:9150'
+# export http_proxy='127.0.0.1:9150'

@@ -1,11 +1,12 @@
 " Include custom files
+source $HOME/.config/nvim/abbr.vim
+source $HOME/.config/nvim/keybindings.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general.vim
-source $HOME/.config/nvim/keybindings.vim
 
 " Bindings
 " nnoremap <leader>gt :YcmCompleter GoTo<CR>
-set hlsearch
+" set hlsearch
 
 let g:indentLine_char = '.'
 " colorscheme badwolf
@@ -40,3 +41,8 @@ let g:airline_powerline_fonts = 1
 
 " Delimit mate
 let g:delimitMate_expand_cr = 2
+
+if exists("+autochdir")
+    set autochdir
+endif
+
