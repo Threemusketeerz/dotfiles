@@ -7,6 +7,8 @@ for arg in $@; do
         # generic setup
         sudo apt update
         sudo apt upgrade
+        sudo apt install python3 python3-dbus python3-pip
+        pip3 install spotify-dbus-status
 
         # General
         sudo apt install git nvim snap

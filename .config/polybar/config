@@ -20,12 +20,14 @@
 circle_icon = 
 
 [colors]
-;background = ${xrdb:color0:#222}
+;background = ${xrdb:nord0:#222}
 background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
+;foreground = ${xrdb:nord4:#dfdfdf}
 foreground = #dfdfdf
+;foreground-alt = ${xrdb:nord7:#555}
 foreground-alt = #555
+;primary = ${xrdb:nord4:#ffb52a}
 primary = #ffb52a
 primary-alt = #E0A16D
 secondary = #e60053
