@@ -26,10 +26,35 @@ nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
 
 nnoremap <leader>sv :source ~/dotfiles/.config/nvim/init.vim <CR>
-nnoremap <leader>ve :e ~/dotfiles/.config/nvim/init.vim <CR>
-nnoremap <leader>ke :e ~/dotfiles/.config/nvim/keybindings.vim <CR>
-nnoremap <leader>ge :e ~/dotfiles/.config/nvim/general.vim <CR>
-nnoremap <leader>pe :e ~/dotfiles/.config/nvim/plugins.vim <CR> 
-nnoremap <leader>ae :e ~/dotfiles/.config/nvim/abbr.vim <CR>
+nnoremap <leader>ev :e ~/dotfiles/.config/nvim/init.vim <CR>
+nnoremap <leader>ek :e ~/dotfiles/.config/nvim/keybindings.vim <CR>
+nnoremap <leader>eg :e ~/dotfiles/.config/nvim/general.vim <CR>
+nnoremap <leader>ep :e ~/dotfiles/.config/nvim/plugins.vim <CR>
+nnoremap <leader>ea :e ~/dotfiles/.config/nvim/abbr.vim <CR>
 
+nnoremap <leader>bn :bn <CR>
+nnoremap <leader>bp :bp <CR>
+nnoremap <leader>tn :tabnext <CR>
+nnoremap <leader>tp :tabp <CR>
+
+" C++ Open header or source file
+nnoremap <leader>oh :e %<.hpp<CR>
+nnoremap <leader>os :e %<.cpp<CR>
+
+nnoremap <leader>vsh :vs %<.hpp<CR>
+nnoremap <leader>vss :vs %<.spp<CR>
+
+nnoremap <leader>sph :sp %<.hpp<CR>
+nnoremap <leader>sps :sp %<.cpp<CR>
+
+" YCM
+nnoremap <F9> :YcmCompleter FixIt<CR>
+nnoremap <F8> :YcmDiag<CR>
+nnoremap <leader>gtd :YcmComplete GoTo<CR>
+
+" NerdTree
+nnoremap <F1> :NERDTree<CR>
+nnoremap <F2> :NERDTreeVCS<CR>
+
+" Specific Json formatting
 com! FormatJson %!python -m json.tool

@@ -4,15 +4,18 @@ DOTFILES=~/dotfiles
 
 for arg in $@; do
     if [ $arg = "setup" ]; then
-        # generic setup
+        # Generic setup
         sudo apt update
         sudo apt upgrade
         sudo apt install python3 python3-dbus python3-pip
         pip3 install spotify-dbus-status
 
         # General
-        sudo apt install git nvim snap
-        sudo snap install spotify eclipse default-jdk intellij-idea-community docker --classic
+        sudo apt install git nvim snap thunderbird
+        sudo snap install spotify
+
+        # Dev
+        sudo snap install default-jdk intellij-idea-community docker --classic
 
         # i3 specific installation
 
