@@ -51,3 +51,7 @@ export SDKMAN_DIR="/home/minihive/.sdkman"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 compton &>/dev/null &
+setxkbmap -layout "us,dk" -option "grp:ctrls_toggle"
+feh --bg-center ~/Pictures/Wallpapers/simpleNightSky.png
+
+export PATH="$HOME/.cargo/bin:$PATH"

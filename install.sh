@@ -44,7 +44,7 @@ ln -s $DOTFILES/.config/nvim $HOME/.config
 #ln -s $DOTFILES/.config/plugins.vim ~
 #ln -s $DOTFILES/.config/init.vim~
 ln -s $DOTFILES/.tmux.conf ~
-ln -s $DOTFILES/.bashrc ~
+ln -s $DOTFILES/.bash_profile ~
 ls -s $DOTFILES/.spacemacs ~
 ln -s $DOTFILES/.config/i3 $HOME/.config
 ln -s $DOTFILES/.config/rofi $HOME/.config
