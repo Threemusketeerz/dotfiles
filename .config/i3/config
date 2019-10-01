@@ -51,6 +51,10 @@ bindsym $mod+Control+m exec xrandr --output HDMI1 --auto --same-as eDP1
 bindsym $mod+Control+r exec xrandr --output HDMI1 --auto --right-of eDP1
 bindsym $mod+Control+l exec xrandr --output HDMI1 --auto --left-of eDP1
 
+# split in horizontal and vertical orientation
+bindsym $mod+Control+h split h
+bindsym $mod+Control+v split v
+
 # change focus
 bindsym $mod+k focus up
 bindsym $mod+j focus down
@@ -75,11 +79,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+shift+h split h
-
-# split in vertical orientation
-bindsym $mod+shift+v split v
 
 
 
