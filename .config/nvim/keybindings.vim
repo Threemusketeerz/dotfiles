@@ -25,6 +25,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
 
+" Edit config files
 nnoremap <leader>sv :source ~/dotfiles/.config/nvim/init.vim <CR>
 nnoremap <leader>ev :e ~/dotfiles/.config/nvim/init.vim <CR>
 nnoremap <leader>ek :e ~/dotfiles/.config/nvim/keybindings.vim <CR>
@@ -32,6 +33,7 @@ nnoremap <leader>eg :e ~/dotfiles/.config/nvim/general.vim <CR>
 nnoremap <leader>ep :e ~/dotfiles/.config/nvim/plugins.vim <CR>
 nnoremap <leader>ea :e ~/dotfiles/.config/nvim/abbr.vim <CR>
 
+" Window management
 nnoremap <leader>bn :bn <CR>
 nnoremap <leader>bp :bp <CR>
 nnoremap <leader>tn :tabnext <CR>
@@ -56,5 +58,11 @@ nnoremap <leader>gtd :YcmComplete GoTo<CR>
 nnoremap <F1> :NERDTree<CR>
 nnoremap <F2> :NERDTreeVCS<CR>
 
+nnoremap <C-p> :FZF<CR>
+
 " Specific Json formatting
 com! FormatJson %!python -m json.tool
+
+inoremap { {}<Left>
+inoremap ( ()<Left>
+inoremap [ []<Left>

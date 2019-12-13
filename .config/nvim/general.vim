@@ -26,7 +26,7 @@ endif
 "let g:syntastic_cpp_include_dirs = ['/usr/lib/avr/include/', '/usr/share/arduino/hardware/arduino/cores/arduino/']
 
 set list
-set relativenumber
+set rnu
 set smarttab
 
 autocmd FileType make set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab

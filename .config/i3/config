@@ -274,18 +274,18 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # gaps inner 20
 
+# Assign apps to worskpacess
 assign [class="Emacs"] $workspace4
-# Assign apps to worskpaces
 assign [class="Firefox"] $workspace10
 assign [class="Arduino"] $workspace2
 assign [class="Eclipse"] $workspace2
 assign [class="Codeblocks"] $workspace2
 assign [class="jetbrains-idea-ce"] $workspace3
 assign [class="jetbrains-studio"] $workspace3
-assign [class="test"] $workspace6
 assign [class="Tor Browser"] $workspace10
-
-for_window [class="test"] floating enable
+assign [class="discord"] $workspace5
+assign [class="Wicd-client.py"] $workspace5
+assign [class="Spotify"] $workspace5
 
 # HELP
 # xprops for recieving window classes.
@@ -314,7 +314,16 @@ bindsym $mod+Shift+x exec bash /home/minihive/Downloads/i3lock-color/lock.sh
 # More info can be found on https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Switching_between_keyboard_layouts
 # To get the groups assignable "cat /usr/share/X11/xkb/rules/base.lst | grep grp:" 
 # Or from site "grep "grp:.*toggle" /usr/share/X11/xkb/rules/base.lst"
-exec setxkbmap -layout "us,dk" -option "grp:ctrls_toggle"
+
+exec --no-startup-id setxkbmap -layout "us,dk" -option "grp:ctrls_toggle"
+exec --no-startup-id dropbox start
+
+exec --no-startup-id compton &>/dev/null &
+exec --no-startup-id feh --bg-center ~/Pictures/Wallpapers/simpleNightSky.png
+
+exec --no-startup-id wicd-client
+exec --no-startup-id firefox
+exec --no-startup-id spotify
 
 # Gif as a background. Simply uses feh to display an animation through gifs. 
 # exec_always killall back4.sh; ~/foo-Wallpaper-Feh-Gif/back4.sh 0.15 ~/foo-Wallpaper-Feh-Gif/gif/morefishinpond.gif

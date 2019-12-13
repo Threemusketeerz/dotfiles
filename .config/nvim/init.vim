@@ -16,8 +16,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+Plug 'airblade/vim-gitgutter'
 
 " C++
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --rust-completer' }
@@ -40,6 +43,10 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'javascript': ['javascript-typescript-stdio'],
     \ }
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+
+" Latex
+Plug 'lervag/vimtex'
+
 " Linting
 Plug 'vim-syntastic/syntastic'
 
@@ -62,11 +69,21 @@ set softtabstop=4
 set tabstop=4
 set wrap
 
+set exrc
 
+au BufEnter *.docker* set syntax=dockerfile
 au BufEnter *.html set syntax=html
 au BufEnter *.vim set ft=vim
 au BufEnter *.yml setlocal shiftwidth=2 tabstop=2
+
+au BufEnter *.tex set ft=tex
+
+" Asks to new line at punctuations. This makes vcs diff easier to distinguish
+"au BufWritePre *.tex silent! %s/\(\.\)\s\(\w\)/\1\r\2/gc
+
 au FilterWritePre * if &diff | setlocal wrap< | endif
+
+command! NewlinePunc silent! %s/\(\.\)\s\(\w\)/\1\r\2/gc
 
 " Annoyances
 command! W w

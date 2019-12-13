@@ -1,15 +1,10 @@
 # List the contents of the folder after choosing the dir
-chooseAndList()
-{
-    cd $@
-    ls -la
-}
-
 alias gits='git status'
 alias gita='git add'
 alias gitc='git commit'
 alias gitd='git diff'
 alias gitr='git reset'
+alias gitt='git log --graph --oneline --all'
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 alias sapt='sudo apt'
@@ -20,8 +15,6 @@ alias ovpnc='sudo openvpn --daemon --askpass --config $HOME/ovpns/raspvpn.ovpn'
 alias umlet='java -jar ~/.jarfiles/Umlet/umlet.jar'
 
 # alias cd='cd $@ & ls -la'
-alias c='chooseAndList'
-
 export SWT_GTK3=0
 export MYVIMRC='~/.vimrc'
 
@@ -47,11 +40,5 @@ export FZF_DEFAULT_OPTS='
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/minihive/.sdkman"
 [[ -s "/home/minihive/.sdkman/bin/sdkman-init.sh" ]] && source "/home/minihive/.sdkman/bin/sdkman-init.sh"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-compton &>/dev/null &
-setxkbmap -layout "us,dk" -option "grp:ctrls_toggle"
-feh --bg-center ~/Pictures/Wallpapers/simpleNightSky.png
 
 export PATH="$HOME/.cargo/bin:$PATH"
