@@ -7,3 +7,4 @@ export SDKMAN_DIR="/home/minihive/.sdkman"
 sct 4000
 
 alias g="git"
+alias grm="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"

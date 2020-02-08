@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdcommenter'
 
 " Nice gui stuff, yum yum
 "Plug 'altercation/vim-colors-solarized'
+Plug 'nightsense/carbonized'
 Plug 'dracula/vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
